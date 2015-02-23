@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+        <title>Listify</title>
+
+        <link rel="stylesheet" type="text/css" href="./index.css">
+
+        <!-- This is what you need -->
+        <script src='./jquery.js'></script>
+        <script src='./pageFilter.js'></script>
+        <!--.......................-->
+
+    </head>
+
+    <body>
+        <a href="https://github.com/isnit0/jquery.pageFilter"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+        <h1>Listify</h1>
+        <h2>Responsive and a whole lot more buzz words.</h2>
+        <a href="https://github.com/isnit0/jquery.pageFilter" class="download button">Download</a>
+
+        <!-- What does it do? -->
+        <h3>Easily add a filter to your web page.</h3>
+        <p style='width:100%;text-align:center;'>Easy to use... No special <strong class='str'>Clases</strong> or <strong class='func'>Functions</strong>, just 100% reason to remember the name.<br />Works with any type of element, UL is only an example.</p>
+
+        <div class="showcase normal">
+            <h4>Using it.</h4>
+            <button class='go'>Filter it!</button>
+
+            <h5>Code:</h5>
+            <br />
+
+            <pre><div><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;input</span> <span style="color: #a6e22e">class=</span><span style="color: #e6db74">&#39;pageFilter&#39;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;ul</span> <span style="color: #a6e22e">class=</span><span style="color: #e6db74">&quot;tofilter&quot;</span><span style="color: #f92672">&gt;</span>
+  <span style="color: #f92672">&emsp;&lt;li</span><span style="color: #f92672">&gt;</span>Volvo<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&emsp;&lt;li</span><span style="color: #f92672">&gt;</span>Saab<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&emsp;&lt;li</span><span style="color: #f92672">&gt;</span>Opel<span style="color: #f92672">&lt;/li&gt;</span>
+  <span style="color: #f92672">&emsp;&lt;li</span><span style="color: #f92672">&gt;</span>Audi<span style="color: #f92672">&lt;/li&gt;</span>
+<span style="color: #f92672">&lt;/ul&gt;</span>
+</pre></div>
+</pre>
+
+            <pre><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;.pageFilter&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">pageFilter</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;.tofilter&#39;</span><span style="color: #f8f8f2">)</span></pre></div></pre>
+
+
+            <div class="vs-icon"></div>
+        </div>
+
+        <div class="showcase sweet" style='text-align:left;'>
+            <h4>Listify</h4>
+            <button class='reset'>Reset</button>
+
+            <h5>Preview:</h5>
+            <Br />
+            <input class='pageFilter'>
+            <ul class="tofilter">
+                <li>Volvo</li>
+                <li>Saab</li>
+                <li>Opel</li>
+                <li>Audi</li>
+            </ul>
+            <script>
+                $('.go').click(function(){
+                    $('.pageFilter').pageFilter('.tofilter')
+                });
+                $('.reset').click(function(){
+                    $('.pageFilter').unbind();
+                    $('.tofilter').children().show();
+                });
+            </script>
+        </div>
+    </body>
+</html>

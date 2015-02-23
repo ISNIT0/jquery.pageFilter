@@ -1,2 +1,2 @@
-# jquery.pageFilter
-Easily add a filter to your web page
+# jquery.tabify
+Easily add tabs to your page.
